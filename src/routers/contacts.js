@@ -17,7 +17,7 @@ import {
 
 const contactsRouter = Router();
 
-contactsRouter.get('/contacts', ctrlWrapper(getContactsController));
+contactsRouter.get('/', ctrlWrapper(getContactsController));
 
 contactsRouter.get(
   '/contacts/:contactId',
@@ -26,7 +26,7 @@ contactsRouter.get(
 );
 
 contactsRouter.post(
-  '/contacts',
+  '/',
   validateBody(createContactsSchema),
   ctrlWrapper(createContactsController),
 );
